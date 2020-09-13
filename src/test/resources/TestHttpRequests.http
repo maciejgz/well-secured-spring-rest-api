@@ -1,0 +1,56 @@
+POST http://localhost:8080/login
+Accept: application/json
+
+{
+    "username": "admin",
+    "password": "qaz123"
+}
+
+###
+POST http://localhost:8080/users/sign-up
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "qaz123"
+}
+
+###
+
+
+POST http://localhost:8080/tasks
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDg3OTM4MX0.lMN-8zCr4nl8O0HAsb95Js1XmVI3p2ODlm8VUgqYt7yvlNfroqcoVUGBnCgEOarMZhJ2-H7uvL7lQbaskqLjYw
+
+
+{
+  "description": "Buy some milk(shake)"
+}
+
+<> 2020-09-13T064136.403.json
+
+###
+GET http://localhost:8080/tasks
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDg3OTM4MX0.lMN-8zCr4nl8O0HAsb95Js1XmVI3p2ODlm8VUgqYt7yvlNfroqcoVUGBnCgEOarMZhJ2-H7uvL7lQbaskqLjYw
+
+<> 2020-09-13T065808.200.json
+<> 2020-09-13T065752.200.json
+
+
+
+###
+PUT http://localhost:8080/tasks/2
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDg3OTM4MX0.lMN-8zCr4nl8O0HAsb95Js1XmVI3p2ODlm8VUgqYt7yvlNfroqcoVUGBnCgEOarMZhJ2-H7uvL7lQbaskqLjYw
+
+
+{
+  "description": "Buy some milk(clear)"
+}
+
+<> 2020-09-13T054421.500.json
+<> 2020-09-13T054416.500.json
+
+###
+DELETE http://localhost:8080/tasks/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwMDg3OTM4MX0.lMN-8zCr4nl8O0HAsb95Js1XmVI3p2ODlm8VUgqYt7yvlNfroqcoVUGBnCgEOarMZhJ2-H7uvL7lQbaskqLjYw
