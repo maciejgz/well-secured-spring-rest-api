@@ -1,0 +1,9 @@
+version: "3"
+services:
+  wssra-backend:
+    image: wssra-backend:latest
+    environment:
+      - 'JAVA_OPTIONS=-Xmx1024m -Xms256m'
+    ports:
+      - 8080:8080
+
